@@ -229,6 +229,108 @@
   /*---------------------------------------------------------Body End---------------------------------------------------------------*/
 
 
+/* ----------------------------------------------------------content css----------------------------------------------- */
+.goal {
+  padding: 40px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal p {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.goal h2 {
+  font-size: 24px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.goal ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goal ul li {
+  width: calc(50% - 20px); /* Adjust the width as needed */
+  margin-bottom: 30px;
+}
+
+.goal ul li img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.goal ul li h2 {
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.goal ul li p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* CSS for delivery section */
+.delivery {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.deliveryCon {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.delivery ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery ul li {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.delivery ul li img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.delivery ul li h2 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.delivery ul li p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* ----------------------------------------------------------content css----------------------------------------------- */
+
   .footer {
     display: flex;
     justify-content: space-around;
