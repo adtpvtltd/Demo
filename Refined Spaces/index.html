@@ -53,9 +53,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem  <br>solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
+                   
                    </section>
                    <img src="assets/IMG3.jpg" alt="Image 3">
                 </div>
@@ -64,9 +62,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
+                    
                    </section>
                    <img src="assets/IMG1.jpg" alt="Image 1">
                 </div>
@@ -75,10 +71,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
-                   </section>
+                </section>
                    <img src="assets/IMG2.jpg" alt="IMG2">
                 </div>
             <div class="swiper-slide">
@@ -86,9 +79,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
+                   
                    </section>
                    <img src="assets/IMG3.jpg" alt="Image 3">
                 </div>
@@ -97,9 +88,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
+                   
                    </section>
                    <img src="assets/IMG1.jpg" alt="Image 1">
                 </div>
@@ -108,9 +97,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                    <button class="button">
-                        Subscribe
-                      </button>
+                   
                    </section>
                    <img src="assets/IMG2.jpg" alt="IMG2">
                 </div>
@@ -119,9 +106,7 @@
                     <h1>Let's Create Your <br> Dream Interior</h1>
                     <p>The world needs innovators and problem <br> solvers who turn
                     challenges into greater opportunities</p>
-                        <button class="button">
-                            Subscribe
-                          </button>
+                       
                    </section>
                    <img src="assets/IMG3.jpg" alt="Image 3">
                 </div>
@@ -389,16 +374,85 @@
 
 </body>
 </html>
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.mySwiper', {
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+  <script>
+    var swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const section1 = document.querySelector('.section1');
+
+      function checkVisibility() {
+          const rect = section1.getBoundingClientRect();
+          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+              section1.classList.add('visible');
+          } else {
+              section1.classList.remove('visible');
+          }
+      }
+
+     
+      window.addEventListener('scroll', checkVisibility);
+      checkVisibility();
+  });
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+
+      function checkVisibility() {
+          cards.forEach(card => {
+              const rect = card.getBoundingClientRect();
+              if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                  card.classList.add('visible');
+              } else {
+                  card.classList.remove('visible');
+              }
+          });
+      }
+
+      
+      window.addEventListener('scroll', checkVisibility);
+      checkVisibility(); 
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.section2, .card');
+
+      function checkVisibility() {
+          elements.forEach(element => {
+              const rect = element.getBoundingClientRect();
+              if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                  element.classList.add('visible');
+              } else {
+                  element.classList.remove('visible');
+              }
+          });
+      }
+
+      
+      window.addEventListener('scroll', checkVisibility);
+      checkVisibility();
+  });
+</script>
+
