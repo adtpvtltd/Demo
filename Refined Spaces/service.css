@@ -76,16 +76,18 @@ body{
     margin-left: 38rem;
     font-size: 2rem;
     color: white;
+    font-family:  Arial, Helvetica, sans-serif;
 
 }
 
 .serviceimg a{
     text-decoration: none;
     color: aliceblue;
+    font-family:  Arial, Helvetica, sans-serif;
 }
 
 .serviceimg a:hover{
-    color: #333;
+    color: goldenrod;
 }
 .construction {
     display: flex;
@@ -209,6 +211,20 @@ button {
   button:hover .arrow:before {
     right: 0;
   }
+
+
+  /* Initial state for construction sections */
+.construction {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state for construction sections when visible */
+.construction.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
   
