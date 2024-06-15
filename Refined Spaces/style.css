@@ -105,11 +105,14 @@ html{
     font-size: 5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 800;
-    color: rgb(92, 89, 89);
-    
-    
-    
+    color: white; 
   }
+
+  
+  .swiper-content h1:hover{
+    color: #0274b3;
+  }
+  
 
   .swiper-content p {
     
@@ -169,6 +172,20 @@ html{
     transform: translateY(-3px);
   }
   
+/* Initial state */
+.section1 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state */
+.section1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
   .button-span {
     color: #aaa;
   }
@@ -178,7 +195,7 @@ html{
     margin-top: 5em;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; /* Space between cards */
+    gap: 16px; 
     justify-content: center;
   }
 
@@ -207,7 +224,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%; /* Adjust width to fit three cards per row */
+    width: 30%;
     overflow: hidden;
     perspective: 1000px;
     box-shadow: 0 0 0 5px #ffffff80;
@@ -261,6 +278,19 @@ html{
     line-height: 1.4;
   }
   
+
+  /* Initial state for cards */
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state for cards */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
   .section2{
@@ -349,6 +379,19 @@ html{
     margin-top: 5rem;
     margin-left: 28rem;
   }
+
+  /* Initial state for section2 */
+.section2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state for section2 */
+.section2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
