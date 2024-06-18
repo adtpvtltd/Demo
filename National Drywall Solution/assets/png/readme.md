@@ -1,1 +1,0 @@
-this is png folder
