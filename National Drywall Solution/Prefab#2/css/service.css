@@ -1,0 +1,49 @@
+        
+h1, h2 {
+    color: #343a40;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#prefab-construction, #drywall, #interior-design {
+   
+    padding: 20px;
+    border-radius: 10px;
+   
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+
+#prefab-construction img,
+    #drywall img,
+    #interior-design img {
+       border-radius: 25px;
+    }
+
+@media (max-width: 768px) {
+    #prefab-construction .col-md-6,
+    #drywall .col-md-6,
+    #interior-design .col-md-6 {
+        text-align: center;
+    }
+
+    #prefab-construction img,
+    #drywall img,
+    #interior-design img {
+        margin-bottom: 20px;
+    }
+}
