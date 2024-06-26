@@ -467,3 +467,10 @@
 .footer .copyright a {
   color: var(--light);
 }
+.gallery img {
+    width: 500px;
+    height: 400px;
+   object-fit: cover;
+   margin: 10px;
+    
+}
