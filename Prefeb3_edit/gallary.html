@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>National Drywall solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!----- Favicon ----->
+    <link rel="shortcut icon" href="img/logofavicon.ico" type="image/x-icon">
+
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: calc(100% - 40px); 
+        object-fit: cover;
+    }
+
+    .swiper-slide h3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #000;
+        margin-top: 3rem;
+    }
+
+    #button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    #toggleButton {
+        border-radius: 25px;
+        background: #0074e0;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem; /* Default font size */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    }
+
+
+
+    .gallery {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery.open {
+        max-height: 500px; 
+        transition: max-height 0.5s ease-in;
+    }
+
+    .gallery-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        width: 80%;
+        height: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+
+    .modal.open {
+        display: flex;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+        .gallery img {
+            max-width: 70px;
+        }
+
+        #toggleButton {
+            font-size: 0.8rem; 
+            padding: 8px 16px; 
+        }
+    }
+
+    @media (max-width: 400px) {
+        .gallery img {
+            max-width: 50px;
+        }
+        
+        button {
+            padding: 8px 16px;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1200px) {
+        #toggleButton {
+            font-size: 0.9rem; 
+            padding: 9px 18px; 
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-blue" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid px-5 d-none d-lg-block" style="background-color: #00349b;">
+  <div class="row gx-0 align-items-center">
+      <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+          <div class="d-flex">
+              <a href="#" class="text-white me-4"><i class="fas fa-envelope text-white me-2"></i>contact@nationaldrywall.in</a>
+              <a href="#" class="text-white me-0"><i class="fas fa-phone-alt text-white me-2"></i>+91 9312355510</a>
+          </div>
+      </div>
+      <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center" style="height: 45px;">
+              <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal text-black"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal text-black"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal text-black"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal text-black"></i></a>
+              <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal text-black"></i></a>
+          </div>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
+          <div class="d-inline-flex align-items-center" style="height: 45px;">
+              <a href="#" class="text-white me-2"> Help</a><small> / </small>
+              <a href="#" class="text-white mx-2"> Support</a><small> / </small>
+              <a href="#" class="text-white ms-2"> Contact</a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+
+ <!-- Modal Search Start -->
+ <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h4 class="modal-title text-blue mb-0" id="exampleModalLabel">Search by keyword</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center">
+                <div class="input-group w-75 mx-auto d-flex">
+                    <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                    <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Search End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar p-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-bs-toggle="dropdown"><span class="dropdown-toggle">Pages</span></a>
+                        <div class="dropdown-menu m-0">
+                            
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="404.html" class="dropdown-item">404 Page</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <button class="btn btn-primary btn-md-square border-blue mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                <a href="" class="btn btn-primary  border-blue rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar & Hero End -->
+
+ <!-- Swiper -->
+ <h1 style="text-align: center;">Our Gallary</h1>
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary1.webp" />
+        <h3>Solid Prefabricated Structure</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary2.webp" />
+        <h3>Prefabricated labour Hutment</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary3.webp" />
+        <h3>Prefabricated Labour Campus</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary4.webp" />
+        <h3>Turnkey Office Interior</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary5.webp" />
+        <h3>Mezzanine Flooring Service</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary6.webp" />
+        <h3>Aerocon Panel</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary7.webp" />
+        <h3>Drywall Partition Solution</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/gallary/gallary8.webp" />
+        <h3>Prefabricated Warehouse</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/25.jpeg" />
+        <h3>Drywall Structure</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/drywall-img1.jpg" />
+        <h3>Drywall Repair</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/image6.jpeg" />
+        <h3>Office Interior Design</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/industrial sheild.webp" />
+        <h3>Industrial Sheild</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/wall Cladding service.webp" />
+        <h3>Wall Cladding Service</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/Reatal outlet.webp" />
+        <h3>Prefeb Rental Outlet</h3>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/modular mezzaninie floors.webp" />
+        <h3>Modualar Mezzanine Floors</h3>
+      </div>
+      
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+     <!-- Add Arrows -->
+     <div class="swiper-button-next"></div>
+     <div class="swiper-button-prev"></div>
+   </div>
+
+ 
+   <!--Gallary-->
+
+  <div id="button"><button id="toggleButton">More Photo</button></div>
+   
+<div class="gallery" id="gallery">
+ 
+    <div class="gallery-wrapper">
+        
+        <img src="img/interior2.avif" alt="Image 1">
+        <img src="img/21.jpeg" alt="Image 2">
+        <img src="img/23.jpeg" alt="Image 3">
+        <img src="img/24.jpeg" alt="Image 4">
+        <img src="img/25.jpeg" alt="Image 5">
+        <img src="img/26.jpeg" alt="Image 6">
+        <img src="img/27.jpeg" alt="Image 7">
+        <img src="img/28.jpeg" alt="Image 8">
+        <img src="img/29.jpeg" alt="Image 9">
+        <img src="img/30.jpeg" alt="Image 10">
+        <img src="img/31.jpeg" alt="Image 11">
+        <img src="img/32.jpeg" alt="Image 12">
+        <img src="img/image1.jpeg" alt="Image 13">
+        <img src="img/image2.jpeg" alt="Image 14">
+        <img src="img/image3.jpeg" alt="Image 15">
+        <img src="img/image4.jpeg" alt="Image 16">
+        <img src="img/image5.jpeg" alt="Image 17">
+        <img src="img/image6.jpeg" alt="Image 18">
+        <img src="img/image7.jpeg" alt="Image 19">
+        <img src="img/image8.jpeg" alt="Image 20">
+        <img src="img/image9.jpeg" alt="Image 21">
+        <img src="img/image10.jpeg" alt="Image 22">
+        <img src="img/image11.jpeg" alt="Image 23">
+        <img src="img/image12.jpeg" alt="Image 24">
+        
+
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <img src="" alt="Modal Image" id="modalImage">
+</div>
+
+<!--Gallary-->
+   
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+          <div class="container py-5">
+              <div class="row g-5">
+                  <div class="col-md-6 col-lg-6 col-xl-3">
+                      <div class="footer-item d-flex flex-column">
+                          <h4 class="text-blue mb-4" style="color: blue;">Contact Info</h4>
+                          <a href=""><i class="fa fa-map-marker-alt me-2"></i>Noida, Uttar Pradesh-201301, IN.</a>
+                          <a href=""><i class="fas fa-envelope me-2"></i>contact@nationaldrywall.in</a>
+                          <a href=""><i class="fas fa-phone me-2"></i> +91 9312355510</a>
+                          <div class="d-flex align-items-center">
+                              <i class="fas fa-share fa-2x text-blue me-2"></i>
+                              <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                              <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
+                              <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
+                              <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-6 col-xl-3">
+                      <div class="footer-item d-flex flex-column">
+                          <h4 class="text-blue mb-4" style="color: blue;">Opening Time</h4>
+                          <div class="mb-3">
+                              <h6 class="text-muted mb-0">Mon - Friday:</h6>
+                              <p class="text-black mb-0">10:00 am to 06:00 pm</p>
+                          </div>
+                          <div class="mb-3">
+                              <h6 class="text-muted mb-0">Satday:</h6>
+                              <p class="text-black mb-0">10:00 am to 02:00 pm</p>
+                          </div>
+                          <div class="mb-3">
+                              <h6 class="text-muted mb-0">Vacation:</h6>
+                              <p class="text-black mb-0">All Sunday is our vacation</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-6 col-xl-3">
+                      <div class="footer-item d-flex flex-column">
+                          <h4 class="text-blue mb-4" style="color: blue;">Our Services</h4>
+                          <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Business</a>
+                          <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Evaluation</a>
+                          <a href="contact.html" class=""><i class="fas fa-angle-right me-2"></i> Work / Career</a>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-6 col-xl-3">
+                      <div class="footer-item">
+                          <h4 class="text-blue mb-4" style="color: blue;">Newsletter</h4>
+                          <p class="text-black mb-3">Subscribe for more updates.</p>
+                          <div class="position-relative mx-auto rounded-pill">
+                              <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                              <button type="button" class="btn btn-primary bg-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Footer End -->
+
+      
+      <!-- Copyright Start -->
+      <div class="container-fluid copyright py-4">
+          <div class="container">
+              <div class="row g-4 align-items-center">
+                  <div class="col-md-6 text-center text-md-start mb-md-0">
+                      <span class="text-black"><a href="#" class="border-bottom text-black"><i class="fas fa-copyright text-black me-2"></i>National Drywall solutions</a>, All right reserved.</span>
+                  </div>
+             
+              </div>
+          </div>
+      </div>
+      <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
+<script>
+  const toggleButton = document.getElementById('toggleButton');
+  const gallery = document.getElementById('gallery');
+  const modal = document.getElementById('modal');
+  const modalImage = document.getElementById('modalImage');
+  const galleryImages = document.querySelectorAll('.gallery img');
+
+  toggleButton.addEventListener('click', () => {
+      if (gallery.classList.contains('open')) {
+          gallery.classList.remove('open');
+          toggleButton.textContent = 'Open Gallary';
+      } else {
+          gallery.classList.add('open');
+          toggleButton.textContent = 'Close Gallary';
+      }
+  });
+
+  galleryImages.forEach(image => {
+      image.addEventListener('click', () => {
+          modalImage.src = image.src;
+          modal.classList.add('open');
+      });
+  });
+
+  modal.addEventListener('click', () => {
+      modal.classList.remove('open');
+  });
+</script>
+
+
+
+
+</body>
+</html>
