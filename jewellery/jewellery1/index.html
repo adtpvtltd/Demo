@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Diana’s jewelry</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<style>
+		  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .category-card {
+      text-align: center;
+      margin-bottom: 30px;
+      flex: 1 1 calc(20% - 20px);
+      margin: 10px;
+    }
+    .category-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #f8f9fa;
+      padding: 15px;
+    }
+    .category-name {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1200px) {
+      .category-card {
+        flex: 1 1 calc(25% - 20px);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .category-card {
+        flex: 1 1 calc(33.33% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .category-card {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .category-card {
+        flex: 1 1 calc(100% - 20px);
+      }
+    }
+	</style>
+</head>
+<body>
+
+	<header id="header">
+		<div class="container">
+			<a href="index.html" id="logo" title="Diana’s jewelry">Diana’s jewelry</a>
+			<div class="right-links">
+				<ul>
+					<li><a href="#"><span class="ico-products"></span>Cart</a></li>
+					<li><a href="#"><span class="ico-account"></span>Account</a></li>
+					<li><a href="#"><span class="ico-signout"></span>Sign out</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / container -->
+	</header>
+	<!-- / header -->
+
+	<nav id="menu">
+		<div class="container">
+			<div class="trigger"></div>
+			<ul>
+				<li><a href="product.html">New collection</a></li>
+				<li><a href="#">necklaces</a></li>
+				<li><a href="#">earrings</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="testinomial.html">Testimonial</a></li>
+			</ul>
+		</div>
+		<!-- / container -->
+	</nav>
+	<!-- / navigation -->
+
+	<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide><img src="images/home-img.webp" alt=""></swiper-slide>
+    <swiper-slide> <img src="images/Homepage_banner_1.webp" alt=""></swiper-slide>
+    <swiper-slide> <img src="images/Homepage_banner_4.webp" alt=""></swiper-slide>
+
+  </swiper-container>
+	<!-- / body -->
+
+	<div id="body">
+		<div class="container">
+			<div class="last-products">
+				<h2>Last added products</h2>
+				<section class="products">
+					<article>
+						<img src="images/product/product1.webp" alt="" style="width: 100%; height: 50%;">
+						<h3>Excepteur sint occaecat</h3>
+						<h4>₹1 850.00</h4>
+						<a href="#" class="btn-add">Add to cart</a>
+					</article>
+					<article>
+						<img src="images/product/product2.webp" alt="" style="width: 100%; height: 50%;">
+						<h3>Lorem ipsum dolor</h3>
+						<h4>₹990.00</h4>
+						<a href="#" class="btn-add">Add to cart</a>
+					</article>
+					<article>
+						<img src="images/product/product3.webp" alt="" style="width: 100%; height: 50%;">
+						<h3>cupidatat non proident</h3>
+						<h4>₹1 200.00</h4>
+						<a href="#" class="btn-add">Add to cart</a>
+					</article>
+					<article>
+						<img src="images/product/product4.webp" alt="" style="width: 100%; height: 50%;">
+						<h3>Duis aute irure</h3>
+						<h4>₹2 650.00</h4>
+						<a href="#" class="btn-add">Add to cart</a>
+					</article>
+					<article>
+						<img src="images/product/product5.webp" alt="" style="width: 100%; height: 50%;">
+						<h3>magna aliqua</h3>
+						<h4>₹3 500.00</h4>
+						<a href="#" class="btn-add">Add to cart</a>
+					</article>
+				</section>
+			</div>
+			
+		</div>
+		<!-- / container -->
+	</div>
+	<!-- / body -->
+
+
+	
+
+   
+	
+<div class="container">
+	<h2>All Categories</h2>
+	<div class="categories">
+	  <div class="category-card">
+		<img src="images/product/rings.webp" alt="Rings">
+		<div class="category-name">RINGS</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/earings.webp" alt="Earrings">
+		<div class="category-name">EARRINGS</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/pendants.webp" alt="Pendants">
+		<div class="category-name">PENDANTS</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/bangels.webp" alt="Bangles">
+		<div class="category-name">BANGLES</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/nose-pin.webp" alt="Nose Pins">
+		<div class="category-name">NOSE PINS</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/bracelets.webp" alt="Bracelets">
+		<div class="category-name">BRACELETS</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/necklas.webp" alt="Necklaces">
+		<div class="category-name">NECKLACES</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/mangalsutra.webp" alt="Mangalsutra">
+		<div class="category-name">MANGALSUTRA</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/gold jewellery.webp" alt="Gold Jewellery">
+		<div class="category-name">GOLD JEWELLERY</div>
+	  </div>
+	  <div class="category-card">
+		<img src="images/product/bullon.webp" alt="Bullion">
+		<div class="category-name">BULLION</div>
+	  </div>
+	</div>
+  </div>
+
+
+
+	<footer id="footer">
+		<div class="container">
+			<div class="cols">
+				<div class="col">
+					<h3>Frequently Asked Questions</h3>
+					<ul>
+						<li><a href="#">Fusce eget dolor adipiscing </a></li>
+						<li><a href="#">Posuere nisl eu venenatis gravida</a></li>
+						<li><a href="#">Morbi dictum ligula mattis</a></li>
+						<li><a href="#">Etiam diam vel dolor luctus dapibus</a></li>
+						<li><a href="#">Vestibulum ultrices magna </a></li>
+					</ul>
+				</div>
+				<div class="col media">
+					<h3>Social media</h3>
+					<ul class="social">
+						<li><a href="#"><span class="ico ico-fb"></span>Facebook</a></li>
+						<li><a href="#"><span class="ico ico-tw"></span>Twitter</a></li>
+						<li><a href="#"><span class="ico ico-gp"></span>Google+</a></li>
+						<li><a href="#"><span class="ico ico-pi"></span>Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact us</h3>
+					<p>Diana’s Jewelry INC.<br>54233 Avenue Street<br>New Delhi</p>
+					<p><span class="ico ico-em"></span><a href="#">contact@dianasjewelry.com</a></p>
+					<p><span class="ico ico-ph"></span>(590) 423 446 924</p>
+				</div>
+				<div class="col newsletter">
+					<h3>Join our newsletter</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium.</p>
+					<form action="#">
+						<input type="text" placeholder="Your email address...">
+						<button type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<p class="copy">Copyright 2024 Jewelry. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+	
+</body>
+</html>
+
