@@ -1,0 +1,348 @@
+
+  body {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.navbar-custom {
+    background-color: #f8f8f8;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #b84c48;
+}
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #a33a35;
+}
+.search-bar {
+    width: 50%;
+}
+.icon-links {
+    display: flex;
+    align-items: center;
+}
+.icon-links .nav-link {
+    display: flex;
+    align-items: center;
+}
+.icon-links .nav-link i {
+    margin-right: 5px;
+}
+@media (max-width: 991px) {
+    .search-bar {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+.navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(184, 76, 72, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+
+.new-arrivals {
+    text-align: center;
+    padding: 2rem 0;
+}
+.new-arrivals h2 {
+    color: #b84c48;
+    margin-bottom: 0.5rem;
+}
+.new-arrivals p {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 1rem;
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.product-card h5 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #b84c48;
+}
+.product-card p {
+    font-size: 0.875rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+.product-card .price {
+    color: #b84c48;
+    font-size: 1.125rem;
+}
+.only-one-left {
+    color: red;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #b84c48;
+}
+.favorite-icon:hover {
+    color: #a33a35;
+}
+
+
+.category-title {
+    color: #7B1D26;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .category-subtitle {
+    color: #7B1D26;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .category-card {
+    border: none;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .category-card:hover {
+    transform: scale(1.05);
+  }
+  .category-card img {
+    width: 100%;
+    height: auto;
+  }
+  .category-card .card-body {
+    background-color: #f8f9fa;
+  }
+  .category-card .card-title {
+    color: #7B1D26;
+    font-weight: bold;
+  }
+  .category-card .btn {
+    color: #7B1D26;
+  }
+
+  .collection-title {
+    color: #7B1D26;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .collection-subtitle {
+    color: #7B1D26;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .collection-card {
+    border: none;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .collection-card:hover {
+    transform: scale(1.05);
+  }
+  .collection-card img {
+    width: 100%;
+    height: auto;
+  }
+  .collection-card .card-body {
+    background-color: #f8f9fa;
+  }
+  .collection-card .card-title {
+    color: #7B1D26;
+    font-weight: bold;
+  }
+  .collection-card .btn {
+    color: #7B1D26;
+  }
+
+
+  .new-title {
+    color: #7B1D26;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .new-subtitle {
+    color: #7B1D26;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .new-card {
+    border: none;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .new-card:hover {
+    transform: scale(1.05);
+  }
+  .new-card img {
+    width: 100%;
+    height: auto;
+  }
+  .new-card .card-body {
+    background-color: #f8f9fa;
+  }
+  .new-card .card-title {
+    color: #7B1D26;
+    font-weight: bold;
+  }
+  .new-card .btn {
+    color: #7B1D26;
+  }
+
+
+  .carousel-item {
+    max-height: 300px; /* Adjust the height as needed */
+  }
+  .testimonial {
+    padding: 20px;
+  }
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+  }
+  .testimonial h5 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+  }
+  .testimonial-text {
+    font-size: 1rem;
+    color: #777;
+  }
+  @media (max-width: 768px) {
+    .carousel-inner {
+      text-align: center;
+    }
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+    }
+    .testimonial h5 {
+      font-size: 1.1rem;
+    }
+    .testimonial-text {
+      font-size: 0.9rem;
+    }
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
+    border-radius: 50%;
+  }
+  .carousel-control-prev-icon {
+    background-image: none;
+  }
+  .carousel-control-next-icon {
+    background-image: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-control-prev:before,
+  .carousel-control-next:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+  .carousel-control-prev:before {
+    transform: rotate(-135deg);
+  }
+  .carousel-control-next:before {
+    transform: rotate(45deg);
+  }
+
+
+  .contact-section {
+    background: url('jewelry-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+  }
+  .contact-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .contact-form h2 {
+    color: #7B1D26;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .contact-form .form-group label {
+    font-weight: bold;
+  }
+  .contact-form .btn-primary {
+    background-color: #7B1D26;
+    border-color: #7B1D26;
+  }
+  .contact-form .btn-primary:hover {
+    background-color: #5a121c;
+    border-color: #5a121c;
+  }
+  .contact-heading {
+    text-align: center;
+    color: #7B1D26;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+      .footer {
+      background-color: #F8EDEB;
+      padding: 2rem 0;
+      margin-bottom: -3rem;
+    }
+    .footer h5 {
+      color: #7B1D26;
+      font-weight: bold;
+    }
+    .footer a {
+      color: #7B1D26;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer .social-icons a {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+    .footer .qr-code img {
+      width: 150px;
+      height: 150px;
+    }
+    .footer .payment-icons img {
+      width: 50px;
+      margin-right: 1rem;
+    }
+    .footer .bottom-links {
+      margin-top: 1rem;
+    }
+    .footer .bottom-links a {
+      color: #7B1D26;
+      margin-right: 1rem;
+    }
