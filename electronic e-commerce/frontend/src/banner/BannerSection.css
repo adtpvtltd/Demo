@@ -1,0 +1,19 @@
+.banner-section {
+    background-color: #1a1a1a;
+    padding: 20px;
+  }
+  
+  .banner-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .banner {
+    flex: 1;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
