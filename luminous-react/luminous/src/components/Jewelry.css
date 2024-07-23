@@ -1,0 +1,130 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.promo-item {
+  position: relative;
+  flex: 1 1 30%; 
+  margin: 0.5rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.promo-item-large {
+  flex: 1 1 45%;
+}
+
+.promo-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.promo-item img:hover {
+  transform: scale(1.1); 
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.promo-item .promo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  -webkit-text-fill-color: black;
+  font-size: 3.5rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.promo-item:hover .promo-text {
+  opacity: 0.8;
+}
+
+.promo-item .discount {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  font-weight: 100;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.promo-item:hover .discount {
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .promo-item {
+    flex: 1 1 45%; 
+  }
+
+  .promo-item-large {
+    flex: 1 1 100%; 
+  }
+
+  .promo-item .promo-text {
+    font-size: 2.5rem; 
+  }
+
+  .promo-item .discount {
+    font-size: 0.9rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-item {
+    flex: 1 1 100%; 
+    margin: 0.5rem 0; 
+  }
+
+  .promo-item .promo-text {
+    font-size: 2rem; 
+  }
+
+  .promo-item .discount {
+    font-size: 0.8rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-item .promo-text {
+    font-size: 1.5rem; 
+  }
+
+  .promo-item .discount {
+    font-size: 0.7rem; 
+  }
+}

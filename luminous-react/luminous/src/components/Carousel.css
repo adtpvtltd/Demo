@@ -1,0 +1,155 @@
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .carousel-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .left-carousel {
+    margin-right: 20px;
+  }
+  
+  .right-carousel {
+    margin-left: 20px;
+  }
+  
+  .center-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    gap: 20px; 
+  }
+  
+  .center-image-container {
+    position: relative;
+  }
+  
+  .center-image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.5s ease-in-out; 
+  }
+  
+  .center-image-container:hover .center-image {
+    transform: scale(1.05); 
+  }
+  
+  .center-image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #300a0a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+    text-align: center;
+  
+  }
+  
+  
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto; 
+    overflow: hidden;
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    width: 100%;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    width: 80%; 
+    box-sizing: border-box;
+  }
+  
+  .carousel-caption h3, .carousel-caption p {
+    margin: 5px 0; 
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel-section {
+      margin: 10px 0;
+    }
+  
+    .center-images {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px; 
+    }
+  
+    .center-image {
+      margin: 0;
+    }
+  }
+  

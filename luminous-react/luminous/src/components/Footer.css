@@ -1,0 +1,153 @@
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subscribe input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background-color: #deb887;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-logo h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  color: #666;
+  max-width: 400px;
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons svg {
+  font-size: 20px;
+  color: #666;
+}
+
+.footer-links {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.footer-links h3 {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #666;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .subscribe input {
+      margin-bottom: 0;
+      margin-right: 10px;
+  }
+
+  .subscribe button {
+      width: auto;
+  }
+
+  .footer-logo {
+      flex-basis: 40%;
+  }
+
+  .footer-links {
+      flex-basis: 25%;
+  }
+
+  .footer-bottom p {
+      flex-basis: auto;
+      text-align: left;
+      margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-logo {
+      flex-basis: 30%;
+  }
+
+  .footer-links {
+      flex-basis: 20%;
+  }
+}

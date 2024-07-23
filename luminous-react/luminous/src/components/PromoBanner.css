@@ -1,0 +1,57 @@
+.promo-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .promo-banner img {
+    width: 100%;
+    display: block;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+   
+  }
+  
+  .banner-text h2 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: peachpuff;
+
+  }
+  
+  .banner-text h3 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .banner-text h4 {
+    font-size: 1.5rem;
+    color: gray;
+    line-break: loose;
+  }
+  
+  
+  .banner-text h2, .banner-text h3, .banner-text h4 {
+    text-shadow: 2px 2px 4px rgba(236, 240, 237, 0.5);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .banner-text h2 {
+      font-size: 2rem;
+    }
+    .banner-text h3 {
+      font-size: 1.5rem;
+    }
+    .banner-text h4 {
+      font-size: 1rem;
+    }
+  }
