@@ -1,0 +1,82 @@
+
+.banner {
+    background-image: url('image/watch-banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    height: 100px; 
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.banner-txt, .banner-brand, .banner-highlight {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.banner-highlight {
+    color: #B76E79;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .banner {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .banner-txt, .banner-brand, .banner-highlight {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .banner-txt, .banner-brand, .banner-highlight {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        height: auto;
+        padding: 10px;
+    }
+
+    .banner-txt, .banner-brand, .banner-highlight {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        height: auto;
+        padding: 5px;
+    }
+
+    .banner-txt, .banner-brand, .banner-highlight {
+        font-size: 0.875rem;
+    }
+
+    .banner-content {
+        gap: 5px;
+    }
+}
