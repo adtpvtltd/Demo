@@ -18,9 +18,9 @@ function Home() {
     <>
     <Header/>
     <Navbar/>
+    <CategoryBar/>
     <Banner/>
     <Jewelry/>
-    <CategoryBar/>
     <TopCollection/>
     <PromoBanner/>
     <ServiceBar/>
