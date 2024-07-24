@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logo from './image/logo.png';
 import search from './image/search.png';
 import setting from './image/setting.png';
 import cart from './image/cart.png';
@@ -43,7 +42,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <h2>SUNDARAM</h2>
         </div>
         <ul className={`nav-links ${isNavOpen ? 'nav-open' : ''}`}>
           <li><a href="/">HOME</a></li>
