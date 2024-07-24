@@ -66,7 +66,7 @@ function Banner() {
                 animate="visible"
                 exit="exit"
               >
-                <motion.h3 variants={itemVariants}>Moods Of The Earth</motion.h3>
+                <motion.h3 variants={itemVariants}>Moods Of The Earth</motion.h3> <br/>
                 <motion.h1 variants={itemVariants}>TRENDING PRODUCTS</motion.h1>
                 <motion.p variants={itemVariants}>An ode to the Earth's artistry, watch how these marvels come alive with diamonds, rubies, tanzanites, citrines, emeralds, rubellite, sapphires and coloured gemstones set in exceptional designs.</motion.p>
                 <motion.button className="shop-now" variants={itemVariants}>SHOP NOW</motion.button>
@@ -86,7 +86,7 @@ function Banner() {
                 animate="visible"
                 exit="exit"
               >
-                <motion.h3 variants={itemVariants}>Moods Of The Earth</motion.h3>
+                <motion.h3 variants={itemVariants}>Moods Of The Earth</motion.h3> <br/>
                 <motion.h1 variants={itemVariants}>TRENDING PRODUCTS</motion.h1>
                 <motion.p variants={itemVariants}>An ode to the Earth's artistry, watch how these marvels come alive with diamonds, rubies, tanzanites, citrines, emeralds, rubellite, sapphires and coloured gemstones set in exceptional designs.</motion.p>
                 <motion.button className="shop-now" variants={itemVariants}>SHOP NOW</motion.button>
