@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaGooglePlusG, FaTwitter, FaInstagram, FaRss } from 'react-icons/fa';
 import './Footer.css';
-import logo from './image/logo.png'
+
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
       
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={logo} alt='logo'/>
+          <h2>SUNDARAM</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
           <div className="social-icons">
             <FaFacebookF />
