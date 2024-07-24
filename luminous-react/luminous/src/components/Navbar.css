@@ -34,6 +34,12 @@
     font-size: 14px;
 }
 
+
+
+.nav-links a:hover{
+    color: #ff6b6b
+}
+
 .icons {
     display: flex;
     align-items: center;
@@ -45,6 +51,56 @@
     margin-left: 20px;
     cursor: pointer;
 }
+
+
+
+.search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Ensure it is above other elements */
+  }
+  
+  .search-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .search-modal h2 {
+    margin: 0 0 15px;
+    font-size: 18px;
+  }
+  
+  .search-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .search-modal button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-modal button:hover {
+    background-color: #555;
+  }
 
 .nav-links li:nth-child(2) a::after {
     content: 'NEW';
