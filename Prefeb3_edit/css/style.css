@@ -887,18 +887,21 @@
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-white);
+    background: #00349b;
 }
 .footer .footer-item a {
     line-height: 30px;
-    color: var(--bs-black);
+    color: white;
     transition: 0.5s;
 }
 
 .footer .footer-item p {
     line-height: 30px;
+    color: white;
     
 }
+
+
 
 .footer .footer-item a:hover {
     letter-spacing: 2px;
