@@ -8,22 +8,22 @@ function TopCollection() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get('https://demo.transportservicedelhi.com/wp-json/wc/v3/products', {
+        params: {
+          consumer_key: 'ck_6c5111fbc4957b26516abf795ab312ec0021eef1',
+          consumer_secret: 'cs_2304491df83d67a41ee1ac642f4e2daddbff9cdb'
+        }
+      });
+      setProducts(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError(err);
+      setLoading(false);
+    }
+  };
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('https://demo.transportservicedelhi.com/wp-json/wc/v3/products', {
-          params: {
-            consumer_key: 'ck_165fe991afbd95675329f4fa0956affd9c5c0805',
-            consumer_secret: 'cs_a6836f82e9e05b92421b7722d77ab49d43a9f668'
-          }
-        });
-        setProducts(response.data);
-        setLoading(false);
-      } catch (err) {
-        setError(err);
-        setLoading(false);
-      }
-    };
 
     fetchProducts();
   }, []);
