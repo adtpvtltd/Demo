@@ -1,7 +1,7 @@
 import React from "react";
 
 function ProductItem({ name, price, images, colors }) {
-  console.log(colors)
+
   return (
     <div className="product-item">
       {images.map((item) => (

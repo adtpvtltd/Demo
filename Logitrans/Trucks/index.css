@@ -1,0 +1,25 @@
+.trans {
+    padding: 30px;
+    text-align: center;
+}
+
+.info {
+    padding: 25px;
+    padding-left: 150px;
+    height: 100%;
+}
+
+
+footer {
+    background-color: wheat;
+}
+
+.footer form {
+    padding-left: 400px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 24px;
+    margin-right: 20px;
+}

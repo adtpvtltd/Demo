@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY Airlines</title>
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <nav>
+        <div class="nav__logo">SKY Airlines</div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="#">About</a></li>
+          <li class="link"><a href="Seats.html">Seats</a></li>
+          <li class="link"><a href="#">Login</a></li>
+         
+        </ul>
+        <button class="btn">Contact</button>
+      </nav>
+
+
+      <div class="container">
+        <div class="about-header">
+            <h1>About SKY Airline</h1>
+        </div>
+        <div class="about-content">
+            <img src="assets/airplane.jpg" alt="SKY Airline">
+            <div class="about-text">
+                <p>Welcome to SKY Airline, where your journey is our passion. Since our inception, we have been dedicated to providing exceptional air travel experiences with top-notch customer service, comfort, and reliability. Our modern fleet and professional crew ensure that you reach your destination safely and comfortably.</p>
+                <p>We are committed to sustainability and innovation, continually striving to reduce our environmental impact while enhancing the passenger experience. Join us and discover the skies with SKY Airline.</p>
+            </div>
+        </div>
+
+        <div class="history">
+            <h2>Our History</h2>
+            <div class="history-card">
+                <img src="assets/history.jpg" alt="History of SKY Airline">
+                <div class="history-text">
+                    <p>SKY Airline was founded in 2000 with a mission to connect people and places with unmatched quality and service. Over the years, we have grown to become one of the leading airlines, recognized for our innovation and commitment to customer satisfaction. Our journey has been one of continuous improvement and adaptation to meet the changing needs of our passengers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-container">
+                <div class="review">
+                    <h3>Jane Doe</h3>
+                    <p>"Flying with SKY Airline was a wonderful experience. The crew was friendly, and the seats were very comfortable."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review">
+                    <h3>John Smith</h3>
+                    <p>"Great service "</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review">
+                    <h3>Emily Johnson</h3>
+                    <p>"The in-flight !"</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review">
+                    <h3>Michael Brown</h3>
+                    <p>"Excellent."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review">
+                    <h3>Sarah Wilson</h3>
+                    <p>"A pleasant flight "</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="review">
+                    <h3>Chris Davis</h3>
+                    <p>"I felt well taken care."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>SKY Airlines</h3>
+          <p>
+            Where Excellence Takes Flight. With a strong commitment to customer
+            satisfaction and a passion for air travel, SKY Airlines offers
+            exceptional service and seamless journeys.
+          </p>
+          <p>
+            From friendly smiles to state-of-the-art aircraft, we connect the
+            world, ensuring safe, comfortable, and unforgettable experiences.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <p>Home</p>
+          <p>About</p>
+          <p>Seats</p>
+          <p></p>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+          <p>Support</p>
+          <p>Media</p>
+          <p>Socials</p>
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>Copyright © 2024 SKY Airlines. All rights reserved.</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+
+    
+<div class="contact-form-overlay" id="contact-form-overlay">
+  <div class="contact-form">
+    <span class="close-btn" onclick="closeContactForm()">&times;</span>
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
+
+<script>
+function toggleContactForm() {
+  var overlay = document.getElementById("contact-form-overlay");
+  overlay.style.display = overlay.style.display === "block" ? "none" : "block";
+}
+
+function closeContactForm() {
+  var overlay = document.getElementById("contact-form-overlay");
+  overlay.style.display = "none";
+}
+
+// Close the contact form when clicking outside the form
+window.addEventListener("click", function(event) {
+  var overlay = document.getElementById("contact-form-overlay");
+  if (event.target == overlay) {
+    closeContactForm();
+  }
+});
+
+// Show contact form when contact button is clicked
+document.querySelector(".btn").addEventListener("click", toggleContactForm);
+
+</script>
